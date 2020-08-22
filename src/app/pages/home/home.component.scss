@@ -33,7 +33,7 @@
     margin-top: 4%;
 }
 .bottom-section{
-    margin: 10% 0 0 10%;
+    margin: 8% 0 0 10%;
     background-color: white;
     width: 82%;
     border-radius: 10px;
@@ -150,9 +150,11 @@
 }
 .fifth-title{
     font-weight: 500;
+    font-style: normal !important;
     font-size: 16px;
     line-height: 20px;
     color: #333;
+    font-family: Roboto,sans-serif;
     margin-bottom: 4px;
 }
 .fifth-text{
@@ -170,4 +172,7 @@
 }
 .fifth-section{
     margin-top: 5%;
+}
+.main{
+    background-color: rgba(22,78,204,.86);
 }

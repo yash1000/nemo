@@ -6,9 +6,9 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './common/header/header.component';
 import { FooterComponent } from './common/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
-import { OurserviceComponent } from './pages/ourservice/ourservice.component';
 import { PartnersComponent } from './pages/partners/partners.component';
 import { GetintouchComponent } from './pages/getintouch/getintouch.component';
+import { OurstoryComponent } from './pages/ourstory/ourstory.component';
 
 @NgModule({
   declarations: [
@@ -16,9 +16,9 @@ import { GetintouchComponent } from './pages/getintouch/getintouch.component';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    OurserviceComponent,
     PartnersComponent,
-    GetintouchComponent
+    GetintouchComponent,
+    OurstoryComponent
   ],
   imports: [
     BrowserModule,
