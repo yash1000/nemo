@@ -8,7 +8,10 @@ import { FooterComponent } from './common/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PartnersComponent } from './pages/partners/partners.component';
 import { GetintouchComponent } from './pages/getintouch/getintouch.component';
+import { MatDialogModule } from '@angular/material/dialog';
 import { OurstoryComponent } from './pages/ourstory/ourstory.component';
+import { PopupsComponent } from './common/popups/popups.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -18,11 +21,17 @@ import { OurstoryComponent } from './pages/ourstory/ourstory.component';
     HomeComponent,
     PartnersComponent,
     GetintouchComponent,
-    OurstoryComponent
+    OurstoryComponent,
+    PopupsComponent
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatDialogModule,
+  ],
+  entryComponents: [
+    PopupsComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
