@@ -12,6 +12,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { OurstoryComponent } from './pages/ourstory/ourstory.component';
 import { PopupsComponent } from './common/popups/popups.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Routes, RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
+    RouterModule,
     MatDialogModule,
   ],
   entryComponents: [

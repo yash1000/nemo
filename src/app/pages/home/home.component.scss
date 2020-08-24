@@ -176,3 +176,15 @@
 .main{
     background-color: rgba(22,78,204,.86);
 }
+#parent{
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    padding-top: 30px;
+    z-index: 1;
+    transition: .3s;
+}
+html{
+    scroll-behavior: smooth;
+    transition: .3s;
+}
