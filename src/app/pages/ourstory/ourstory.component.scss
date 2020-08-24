@@ -90,3 +90,24 @@ html{
 .white-space{
     padding-top: 130px;
 }
+@media only screen and (max-width: 770px) {
+    .block-1-text{
+        font-size: 20px !important;
+    }
+    .text-size{
+        width: 100%;
+    }
+    .p-size{
+        width: 100%;
+    }
+    .wrapper{
+        width: 100%;
+    }
+    .team-section{
+        width: 100%;
+    }
+    .img1{
+        margin-top: 40px;
+        width: 100%;
+    }
+}

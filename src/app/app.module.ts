@@ -13,6 +13,7 @@ import { OurstoryComponent } from './pages/ourstory/ourstory.component';
 import { PopupsComponent } from './common/popups/popups.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Routes, RouterModule } from '@angular/router';
+import { XpertComponent } from './pages/xpert/xpert.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { Routes, RouterModule } from '@angular/router';
     PartnersComponent,
     GetintouchComponent,
     OurstoryComponent,
-    PopupsComponent
+    PopupsComponent,
+    XpertComponent
   ],
   imports: [
     BrowserAnimationsModule,

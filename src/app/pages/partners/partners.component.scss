@@ -5,7 +5,7 @@
     color: white;
 }
 .wrapper-main{
-    height: 100vh;
+    height: 100%;
 }
 .set-main-section{
     padding-top: 16%;
@@ -91,4 +91,54 @@
 html{
     scroll-behavior: smooth;
     transition: .3s;
+}
+@media only screen and (max-width: 1215px) {
+    .border-in-image{
+        border-right: 0px;
+    }
+}
+
+@media only screen and (max-width: 1205px) {
+    .img1{
+        width: 100%;
+    }
+    .parner-text{
+        font-size: 13px;
+    }
+    .wrapper-main{
+        padding-bottom: 6px;
+    }
+    .img2{
+        width: 100%;
+    }
+    .border-in-image{
+        border-right: 0px;
+    }
+    .img3{
+        width: 70%;
+    }
+    .h-1{
+        margin-left: 20px;
+    }
+    .leding-partner-form{
+        padding: 0px;
+        width: 100%;
+    }
+    .t-1{
+        font-size: 13px;
+    }
+    .img4{
+        margin-top: 50px;
+        width: 100%;
+    }
+    .business-secrtiton-text{
+        font-size: 15px;
+    }
+    .t-2{
+        font-size: 12px;
+    }
+    .business-section-button{
+        padding: 0px;
+        width: 100%;
+    }
 }

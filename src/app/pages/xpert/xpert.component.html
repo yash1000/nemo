@@ -1,0 +1,48 @@
+<div id="parent"> <app-header id="header2"></app-header> </div>
+<div class="container top-margin">
+    <div class="row">
+        <div class="col-xl-12">
+            <p class="title">Ask a Question!</p>
+            <input type="text" class="input-1" placeholder="start rtping.....">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-4">
+            <input type="text" class="input-1" placeholder="Name">
+        </div>
+        <div class="col-xl-4">
+            <input type="text" class="input-1" placeholder="Email or Mobile">
+        </div>
+        <div class="col-xl-4">
+            <button type="submit" class="input-1" class="btn-1" value="submit">submit</button>
+        </div>
+    </div>
+</div>
+<br>
+<div class="paregraph">
+    <div class="container ">
+        <div class="row">
+            <div class="col-xl-7 col-sm-8 col-xs-6">
+                <img class="image" src="../../../assets/images/xpert-1.png">
+                <div class="text-wrapper">
+                    <p class="text-1">Mr. Nilesh P Desai is a B.E. metallurgy from 1974 batch of M.S. University and has over 45 years of experience in managing manufacturing units. During his career, he has revived/rehabilitated multiple small businesses.</p>
+                    <p class="text-1">Mr. Desai has wide knowledge about MSMEs and represents the interest of MSMEs in various local and national committees. Mr. Desai has authored the book “The Unexplored Goldmine” and has been featured on yourstory for his entrepreneurial venture</p>
+                    <p class="name">Nilesh P desai</p>
+                    <p class="position">MSME Expert at NEMO</p>
+                </div>
+            </div>
+            <div class="col-xl-5 col-sm-4 col-xs-6 btn-2-wrapper">
+                <button type="button" class="btn-2" (click)="form()" *ngIf="formopen===false">Talk to Expert  
+                    <svg width="38" height="18" viewBox="0 0 38 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path _ngcontent-rng-c24="" d="M37.3242 8.74952L28.4695 1.06437C28.4016 1.00577 28.3148 0.972961 28.2234 0.972961H26.1492C25.9758 0.972961 25.8961 1.18859 26.0273 1.30109L34.2352 8.42609H0.519531C0.416406 8.42609 0.332031 8.51046 0.332031 8.61359V10.0198C0.332031 10.123 0.416406 10.2073 0.519531 10.2073H34.2328L26.025 17.3323C25.8937 17.4472 25.9734 17.6605 26.1469 17.6605H28.2914C28.3359 17.6605 28.3805 17.6441 28.4133 17.6136L37.3242 9.8839C37.4054 9.81334 37.4704 9.7262 37.515 9.62835C37.5596 9.53051 37.5826 9.42424 37.5826 9.31671C37.5826 9.20919 37.5596 9.10291 37.515 9.00507C37.4704 8.90722 37.4054 8.82008 37.3242 8.74952Z" fill="white"></path></svg>
+                </button>
+                <div class="form-1" *ngIf="formopen===true">
+                    <input class="form-2-input" type="text" placeholder="Name">
+                    <input class="form-2-input" type="text" placeholder="Email or Mobile">
+                    <button class="form-2-button" type="submit">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<app-footer></app-footer>

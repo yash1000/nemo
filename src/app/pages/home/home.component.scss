@@ -1,5 +1,6 @@
 .main{
-    height: 100vh !important;
+    height: 100%;
+    padding-bottom: 10px;
     background-image: url(../../../assets/images/home-bg.svg);
     background-size: cover;
     background-position: center;
@@ -188,3 +189,66 @@ html{
     scroll-behavior: smooth;
     transition: .3s;
 }
+
+
+
+
+
+
+
+@media only screen and (max-width: 770px) {
+        .first-line{
+            font-size: 20px;
+        }
+        .second-line{
+            font-size: 30px;
+        }
+        .second-section{
+            width: 100%;
+            margin: 0px;
+        }
+        .second-section-header{
+            font-size: 25px;
+        }
+        .second-sesction-text{
+            font-size: 18px;
+        }
+        .third-section{
+            margin: 0px;
+            background-color: white;
+            width: 100%;
+            border-radius: 10px;
+        }
+        .third-section-text{
+            font-size: 25px;            
+            // padding-top: 17%;
+        }
+        .img-2{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .fifth-header{
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 25px;
+        }
+        .fifth-title{
+            font-size: 13px;
+        }
+        .img-3{
+            margin-top: 40px;
+            width: 100%;
+        }
+        .fifth-width{
+            width: 80%;
+        }
+  }
+
+
+
+
+  @media only screen and (max-width: 770px) {
+      .third-section-text{
+          padding-top: 0px;
+      }
+  }
