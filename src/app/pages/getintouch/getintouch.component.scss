@@ -71,8 +71,48 @@ html{
     scroll-behavior: smooth;
     transition: .3s;
 }
+.img{
+    margin-left: 23%;
+    padding: 7%;
+}
+.btn-3{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
 .white-space{
     padding-top: 130px;
+}
+.p-1{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 0;
+    color: #333;
+    margin: 5%;
+}
+.p-2{
+    margin: 5%;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 8px;
+    color: #333;
+}
+.btn-1{
+    margin: 6%;
+    margin-left: 28%;
+    background-color: transparent;
+    border: 1px solid #4f4f4f;
+    border-radius: 4px;
+    width: 190px;
+    height: 46px;
+    -webkit-box-pack: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 12px;
+    color: #4f4f4f;
+    -webkit-transition: .3s;
+    transition: .3s;
 }
 @media only screen and (max-width: 770px) {
 .wrapper{

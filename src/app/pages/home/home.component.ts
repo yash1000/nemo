@@ -1,7 +1,6 @@
-import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
-import {MatDialog} from '@angular/material/dialog';
-import { PopupsComponent } from 'src/app/common/popups/popups.component';
+import { Component, OnInit, HostListener, ElementRef, TemplateRef } from '@angular/core';
 import * as $ from 'jquery';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal'; 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -9,7 +8,7 @@ import * as $ from 'jquery';
 })
 export class HomeComponent implements OnInit {
 
-
+  modalRef: BsModalRef;
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
     const element = this.eleref.nativeElement.querySelector('#header2');
@@ -28,23 +27,14 @@ export class HomeComponent implements OnInit {
   }
 
 
-  constructor(public dialog: MatDialog, private eleref: ElementRef) { }
+  constructor( private eleref: ElementRef, private modalService: BsModalService) { }
 
   ngOnInit(): void {
     const element = this.eleref.nativeElement.querySelector('#header2');
     $(element).find("li>a").css({"color": "white"});
   }
-  // openDialog(): void {
-  //  this.dialog.open(PopupsComponent, {
-  //     autoFocus: false,
-  //   });
-
-    // dialogRef.afterClosed().subscribe(result => {
-    //   console.log('The dialog was closed');
-    // });
-  //   dialogConfig.position = {
-  //     'top': '0',
-  //     left: '0'
-  // };
+  // openModalWithClass(template: TemplateRef<any>) {
+  //       this.modalRef = this.modalService.show(template,Object.assign({}, { class: 'gray modal-lg' }));
+  //     }
   }
 

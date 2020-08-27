@@ -8,11 +8,11 @@ import { FooterComponent } from './common/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PartnersComponent } from './pages/partners/partners.component';
 import { GetintouchComponent } from './pages/getintouch/getintouch.component';
-import { MatDialogModule } from '@angular/material/dialog';
 import { OurstoryComponent } from './pages/ourstory/ourstory.component';
 import { PopupsComponent } from './common/popups/popups.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Routes, RouterModule } from '@angular/router';
+import { ModalModule } from 'ngx-bootstrap/modal';  
 import { XpertComponent } from './pages/xpert/xpert.component';
 
 @NgModule({
@@ -31,8 +31,8 @@ import { XpertComponent } from './pages/xpert/xpert.component';
     BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
+    ModalModule.forRoot(),
     RouterModule,
-    MatDialogModule,
   ],
   entryComponents: [
     PopupsComponent

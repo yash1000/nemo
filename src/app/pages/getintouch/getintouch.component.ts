@@ -1,12 +1,13 @@
-import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
+import { Component, OnInit, HostListener, ElementRef, TemplateRef } from '@angular/core';
 import * as $ from 'jquery';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal'; 
 @Component({
   selector: 'app-getintouch',
   templateUrl: './getintouch.component.html',
   styleUrls: ['./getintouch.component.scss']
 })
 export class GetintouchComponent implements OnInit {
-
+  modalRef: BsModalRef;
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
     const element = this.eleref.nativeElement.querySelector('#header2');
@@ -21,9 +22,11 @@ export class GetintouchComponent implements OnInit {
     $('#parent').css('padding-top', 30);
     }
   } 
-  constructor(private eleref: ElementRef) { }
+  constructor(private eleref: ElementRef, private modalService: BsModalService) { }
 
   ngOnInit(): void {
   }
-
+  openModalWithClass(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template,Object.assign({}, { class: 'gray modal-md' }));
+  }
 }

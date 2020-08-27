@@ -42,8 +42,48 @@
             <textarea rows="10" cols="30" type="text" name="email" id="email" placeholder="Please describe somthing about your project"></textarea><br>
         </div>
         <div class="button">
-            <button class="form-button">SUBMIT</button>
+            <button class="form-button" (click)="openModalWithClass(template)">SUBMIT</button>
         </div>
     </div>
 </div>
+
+
+<ng-template #template>  
+    <!-- <div class="modal-header">   -->
+      <!-- <h4 class="modal-title text-ctr">BECOME NEMO'S BUSINESS SERVICE PARTNER</h4>     -->
+      <button type="button" class="close btn-3" aria-label="Close" (click)="modalRef.hide()">  
+        <span aria-hidden="true">×</span>  
+      </button>  
+
+    <!-- </div>   -->
+    <div class="modal-body">  
+      <!-- <h3>List of my upcomming articles in DZone</h3>   -->
+      <img class="img" src="../../../assets/images/thanks-you.svg">
+      <p class="text-center p-1">Thank you for your interest.</p>
+      <p class="text-center p-2">Our management will reach out to you shortly.</p>
+      <button class="btn-1">close</button>
+      <!-- <div class="row">
+          <div class="col-xl-6">
+  <input type="text" class="model-input" placeholder="Name"><br><br>
+  <input type="text" class="model-input" placeholder="Phone number">
+  </div>
+  <div class="col-xl-6">
+  <select name="cars" id="cars" class="model-input">
+      <option value="Searvice area"> Service area</option>
+      <option value="haydrabd1">haydrabd1</option>
+      <option value="haydrabad2">haydrabad2</option>
+      <option value="audhaydrabad3">haydrabad2</option>
+    </select>
+  <br><br>
+  <input type="text" class="model-input" placeholder="Email">
+  
+  </div>
+  </div> -->
+      <!-- <h3>You can check my all DZone Articles <a href="https://dzone.com/users/3961436/sidmvp07.html">here</a></h3>   -->
+    </div>  
+    <!-- <div class="modal-footer">   -->
+      <!-- <button type="button" class="btn btn-default btn-2" (click)="modalRef.hide()">Submit</button>   -->
+    <!-- </div>   -->
+  
+  </ng-template>  
 <app-footer></app-footer>
