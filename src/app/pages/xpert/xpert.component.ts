@@ -44,7 +44,7 @@ export class XpertComponent implements OnInit {
   }
   onSubmit(abc){
     console.log(this.profileForm.value);
-    this.api.RequestDemo(this.profileForm.value).subscribe((res: any) => {
+    this.api.TalkToExpert(this.profileForm.value).subscribe((res: any) => {
       console.log(res);
       this.profileForm.reset();
     });
