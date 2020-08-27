@@ -1,6 +1,7 @@
 
 <div id="parent"> <app-header id="header2"></app-header> </div>
 <div class="main">
+    <br>
     <div class="container">
         <div class="center-text text-center">
             <p class="first-line">On a mission to enhance the competitiveness of</p>
@@ -68,7 +69,7 @@
   <input type="text" class="inp-1" formControlName="Name"  class="inp-1" placeholder="User Name">
   <input type="text" class="inp-1" formControlName="Email"  placeholder="Email">
   <input type="text" class="inp-1" formControlName="ContactNumber" class="inp-1" placeholder="Phone nuber"><br><br>
-  <button class="btn-popup">Submit</button>
+  <button class="btn-popup" (click)="modalRef.hide()">Submit</button>
 </form>
   </div>
   </div>
@@ -81,40 +82,13 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="third-section">
     <div class="container">
         <div class="row">
-            <div class="col-xl-5 col-sm-6">
+            <div class="col-xl-5 col-sm-6 order-12">
                 <img class="img-2" src="../../../assets/images/Finance-rafiki.svg">
             </div>
-            <div class="col-xl-7 col-sm-6">
+            <div class="col-xl-7 col-sm-6 order-1">
                 <p class="third-section-text">
                     A Finance And Banking App That Makes Tracking Cash Flows Easy
                 </p>
@@ -154,7 +128,7 @@
     <div class="fifth-width">
     <div class="container">
         <div class="row">
-            <div class="col-xl-8 col-sm-6">
+            <div class="col-xl-8 col-sm-6 order-12">
                 <div class=" fifth-text-part">
                 <h4 class="fifth-header">A Financial Lifeline To Keep You Afloat</h4>
                 <p class="fifth-title"><i class="fa fa-check" style="font-size:18px;color:  #9b51e0;"></i>Get invoices discounted</p>
@@ -163,10 +137,11 @@
                 <p class="fifth-text">Get best interest rates by making payments/collections through Nemo</p>
             </div>
             </div>
-            <div class="col-xl-4 col-sm-6">
+            <div class="col-xl-4 col-sm-6 order-1">
                 <img class="img-3" src="../../../assets/images/Bankruptcy-amico.svg">
             </div>
     </div>
 </div>
 </div>
+<br><br>
 <app-footer></app-footer>
