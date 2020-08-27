@@ -36,7 +36,7 @@
             <div class="col-xl-7 col-sm-6 second-section-text-part">
                 <p class="second-section-header">A New Way To Run Your Business</p>
                 <p class="second-sesction-text">An easy, secure and smart application to run your business smoothly.Access securely from your computer or mobile. Brought to you in partnership with ICICI Bank</p>
-                 <button class="second-section-button">Request Demo
+                 <button class="second-section-button" (click)="openModalWithClass(template)" >Request Demo
                    <span class="btn-span"><svg _ngcontent-byn-c36="" width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path _ngcontent-byn-c36="" d="M1.28711 1.09668L7.56445 7.22099L1.28711 13.7314" stroke="white" stroke-width="2"></path></svg></span>
                 </button> 
             </div>
@@ -50,7 +50,32 @@
 
 
 
-
+<ng-template #template>  
+    <button type="button" class="close close-btn" aria-label="Close" (click)="modalRef.hide()">  
+        <span aria-hidden="true">×</span>  
+      </button>  
+    <div class="modal-body"> 
+        <div class="pop-wrapper">
+      <div class="row">
+          <div class="col-xl-6 colum">
+<img src="../../../assets/images/Mobile-apps-pana.svg" class="img-9">
+  </div>
+  <div class="col-xl-6 colum">
+<p class="header-1">
+    REQUEST DEMO
+</p>
+<form  [formGroup]="profileForm"  (ngSubmit)="onSubmit($event)">
+  <input type="text" class="inp-1" formControlName="Name"  class="inp-1" placeholder="User Name">
+  <input type="text" class="inp-1" formControlName="Email"  placeholder="Email">
+  <input type="text" class="inp-1" formControlName="ContactNumber" class="inp-1" placeholder="Phone nuber"><br><br>
+  <button class="btn-popup">Submit</button>
+</form>
+  </div>
+  </div>
+</div> 
+    </div>  
+  
+  </ng-template> 
 
 
 

@@ -14,7 +14,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Routes, RouterModule } from '@angular/router';
 import { ModalModule } from 'ngx-bootstrap/modal';  
 import { XpertComponent } from './pages/xpert/xpert.component';
-
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ApicallService } from './services/apicall.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,15 +32,18 @@ import { XpertComponent } from './pages/xpert/xpert.component';
   ],
   imports: [
     BrowserAnimationsModule,
+    ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
     ModalModule.forRoot(),
     RouterModule,
+    HttpClientModule,
+    FormsModule
   ],
   entryComponents: [
     PopupsComponent
   ],
-  providers: [],
+  providers: [ApicallService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

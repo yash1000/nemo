@@ -1,22 +1,30 @@
 <div id="parent"> <app-header id="header2"></app-header> </div>
 <div class="container top-margin">
+    <form  [formGroup]="profileForm"  (ngSubmit)="onSubmit($event)">
     <div class="row">
         <div class="col-xl-12">
             <p class="title">Ask a Question!</p>
-            <input type="text" class="input-1" placeholder="start rtping.....">
+            <input type="text" class="input-1" formControlName="Problem" placeholder="start typing.....">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-6">
+            <input type="text" class="input-1" formControlName="ContactNumber" placeholder="Contact number">
         </div>
     </div>
     <div class="row">
         <div class="col-xl-4">
-            <input type="text" class="input-1" placeholder="Name">
+            <input type="text" class="input-1" formControlName="Name" placeholder="Name">
         </div>
         <div class="col-xl-4">
-            <input type="text" class="input-1" placeholder="Email or Mobile">
+            <input type="text" class="input-1" formControlName="Email" placeholder="Email or Mobile">
         </div>
         <div class="col-xl-4">
             <button type="submit" class="input-1" class="btn-1" value="submit">submit</button>
         </div>
     </div>
+
+</form>
 </div>
 <br>
 <div class="paregraph">

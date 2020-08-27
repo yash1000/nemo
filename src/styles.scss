@@ -5,3 +5,6 @@ html{
 .modal-content{
     margin-top: 150px !important;
 }
+*:focus {
+    outline: 0 !important;
+}

@@ -26,64 +26,41 @@
 <p class="header text-center">Leave a Messege</p>
 <p class="text-center">Leave a message and We’ll get back to you shortly.</p>
 <div class="container">
+    <form  [formGroup]="profileForm"  (ngSubmit)="onSubmit($event)">
     <div class="row wrapper">
         <div class="col-xl-6 col-sm-6">
                 <label for="name">name</label><br>
-                <input type="text" name="name" id="name" placeholder="Your full name"><br><br>
+                <input type="text" formControlName="Name" name="name" id="name" placeholder="Your full name"><br><br>
                 <label for="female">Name of Organisation</label><br>
-                <input type="text" name="org" id="org" placeholder="Leave it Emplty if you don't have a name"><br><br>
+                <input type="text" formControlName="Organisation" name="org" id="org" placeholder="Leave it Emplty if you don't have a name"><br><br>
                 <label for="other">Contact Number</label><br>
-                <input type="number" name="number" id="number" placeholder="Please enter your mobile number"><br><br>
+                <input type="number" formControlName="ContactNumber" name="number" id="number" placeholder="Please enter your mobile number"><br><br>
                 <label for="other">Email</label><br>
-                <input type="text" name="email" id="email" placeholder="Enter your Email"><br>
+                <input type="text" formControlName="Email" name="email" id="email" placeholder="Enter your Email"><br>
         </div>
         <div class="col-xl-6 col-sm-6">
             <label for="other">Your message</label><br>
-            <textarea rows="10" cols="30" type="text" name="email" id="email" placeholder="Please describe somthing about your project"></textarea><br>
+            <textarea rows="10" formControlName="Message" cols="30" type="text" name="email" id="email" placeholder="Please describe somthing about your project"></textarea><br>
         </div>
         <div class="button">
             <button class="form-button" (click)="openModalWithClass(template)">SUBMIT</button>
         </div>
     </div>
+</form>
 </div>
 
 
 <ng-template #template>  
-    <!-- <div class="modal-header">   -->
-      <!-- <h4 class="modal-title text-ctr">BECOME NEMO'S BUSINESS SERVICE PARTNER</h4>     -->
       <button type="button" class="close btn-3" aria-label="Close" (click)="modalRef.hide()">  
         <span aria-hidden="true">×</span>  
       </button>  
 
-    <!-- </div>   -->
     <div class="modal-body">  
-      <!-- <h3>List of my upcomming articles in DZone</h3>   -->
       <img class="img" src="../../../assets/images/thanks-you.svg">
       <p class="text-center p-1">Thank you for your interest.</p>
       <p class="text-center p-2">Our management will reach out to you shortly.</p>
       <button class="btn-1">close</button>
-      <!-- <div class="row">
-          <div class="col-xl-6">
-  <input type="text" class="model-input" placeholder="Name"><br><br>
-  <input type="text" class="model-input" placeholder="Phone number">
-  </div>
-  <div class="col-xl-6">
-  <select name="cars" id="cars" class="model-input">
-      <option value="Searvice area"> Service area</option>
-      <option value="haydrabd1">haydrabd1</option>
-      <option value="haydrabad2">haydrabad2</option>
-      <option value="audhaydrabad3">haydrabad2</option>
-    </select>
-  <br><br>
-  <input type="text" class="model-input" placeholder="Email">
-  
-  </div>
-  </div> -->
-      <!-- <h3>You can check my all DZone Articles <a href="https://dzone.com/users/3961436/sidmvp07.html">here</a></h3>   -->
     </div>  
-    <!-- <div class="modal-footer">   -->
-      <!-- <button type="button" class="btn btn-default btn-2" (click)="modalRef.hide()">Submit</button>   -->
-    <!-- </div>   -->
   
   </ng-template>  
 <app-footer></app-footer>
