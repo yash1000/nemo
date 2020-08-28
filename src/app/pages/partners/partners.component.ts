@@ -9,6 +9,7 @@ import { ApicallService } from '../../services/apicall.service'
   styleUrls: ['./partners.component.scss']
 })
 export class PartnersComponent implements OnInit {
+  inp:any ="asas";
   modalRef: BsModalRef;
   profileForm: FormGroup;
   profileForm1: FormGroup;

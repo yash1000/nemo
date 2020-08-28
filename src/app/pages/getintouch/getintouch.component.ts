@@ -19,7 +19,6 @@ export class GetintouchComponent implements OnInit {
     $(element).css('padding-top' , 120);
     $('#parent').css('padding-top', 7);
     $('#parent').css('background-color', 'white');
-    $(element).find('li').css({color: 'red !important'});
     } else {
     $(element).css('padding-top' , 120);
     $('#parent').css('padding-top', 30);

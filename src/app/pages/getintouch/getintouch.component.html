@@ -13,34 +13,34 @@
             <img class="item-display icon" src="../../../assets/images/phone.svg">
             <p class="item-display simple-text">Contact us at</p>
             <p>Hyderabad, India</p>
-            <P>+91 889 762 8000</P>
+            <P>+91-912 100 7703</P>
         </div>
         <div class="col-xl-4 col-sm-4">
             <img class="item-display icon" src="../../../assets/images/time.svg">
             <p class="item-display simple-text">Working Hours</p>
             <p>Days :</p>
-            <P>Monday - Friday</P>
+            <P>Monday - Thursday</P>
         </div>
     </div>
 </div>
 <p class="header text-center">Leave a Messege</p>
 <p class="text-center">Leave a message and We’ll get back to you shortly.</p>
-<div class="container">
+<div class="container form-width">
     <form  [formGroup]="profileForm"  (ngSubmit)="onSubmit($event)">
     <div class="row wrapper">
         <div class="col-xl-6 col-sm-6">
                 <label for="name">name</label><br>
-                <input type="text" formControlName="Name" name="name" id="name" placeholder="Your full name"><br><br>
+                <input type="text" formControlName="Name" name="name" id="name" placeholder="full name" required><br><br>
                 <label for="female">Name of Organisation</label><br>
-                <input type="text" formControlName="Organisation" name="org" id="org" placeholder="Leave it Emplty if you don't have a name"><br><br>
+                <input type="text" formControlName="Organisation" name="org" id="org" placeholder="Organisation name (option)"><br><br>
                 <label for="other">Contact Number</label><br>
-                <input type="number" formControlName="ContactNumber" name="number" id="number" placeholder="Please enter your mobile number"><br><br>
+                <input type="number" formControlName="ContactNumber" name="number" id="number" placeholder="Mobile number" required><br><br>
                 <label for="other">Email</label><br>
-                <input type="text" formControlName="Email" name="email" id="email" placeholder="Enter your Email"><br>
+                <input type="text" formControlName="Email" name="email" id="email" placeholder="Email address" required><br>
         </div>
         <div class="col-xl-6 col-sm-6">
             <label for="other">Your message</label><br>
-            <textarea rows="10" formControlName="Message" cols="30" type="text" name="email" id="email" placeholder="Please describe somthing about your project"></textarea><br>
+            <textarea rows="10" formControlName="Message" cols="30" type="text" name="email" id="email" placeholder="Write your message"></textarea><br>
         </div>
         <div class="button">
             <button class="form-button" (click)="openModalWithClass(template)">SUBMIT</button>
@@ -59,7 +59,7 @@
       <img class="img" src="../../../assets/images/thanks-you.svg">
       <p class="text-center p-1">Thank you for your interest.</p>
       <p class="text-center p-2">Our management will reach out to you shortly.</p>
-      <button class="btn-1">close</button>
+      <button class="btn-1" (click)="modalRef.hide()">close</button>
     </div>  
   
   </ng-template>  

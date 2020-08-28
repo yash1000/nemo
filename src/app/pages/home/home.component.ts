@@ -18,13 +18,10 @@ export class HomeComponent implements OnInit {
     if (numb >= 100) {
     $(element).css('padding-top' , 120);
     $('#parent').css('padding-top', 7);
-    $('#parent').css('background-color', '#164ecc');
-    $(element).find("li>a").css({"color": "white"});
+    $('#parent').css('background-color', 'white');
     } else {
     $(element).css('padding-top' , 120);
     $('#parent').css('padding-top', 30);
-    $('#parent').css('background-color', 'transparent');
-    $(element).find("li>a").css({"color": "white"});
     }
   }
 
@@ -37,11 +34,11 @@ export class HomeComponent implements OnInit {
         Email : [],
         ContactNumber : []
       });
-    const element = this.eleref.nativeElement.querySelector('#header2');
-    $(element).find("li>a").css({"color": "white"});
+      const element = this.eleref.nativeElement.querySelector('#header2');
+      $(element).find('li>a').css({'color': 'black'});
   }
   openModalWithClass(template: TemplateRef<any>) {
-    this.modalRef = this.modalService.show(template,Object.assign({}, { class: 'gray modal-lg' }));
+    this.modalRef = this.modalService.show(template, Object.assign({}, { class: 'gray modal-lg' }));
   }
   onSubmit(event) {
     console.log(this.profileForm.value);

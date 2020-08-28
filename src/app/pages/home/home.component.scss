@@ -1,69 +1,69 @@
-html, body {
-    height: 100%;
-  }
-.main{
-    height: 100%;
-    padding-bottom: 10px;
-    background-image: url(../../../assets/images/home-bg.svg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.center-text{
-    padding: 25% 0 0 0;
-}
-.first-line{
-    font-family: Sailec;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 27px;
-    line-height: 37px;
-    color:white;
-}
-.second-line{
-    font-family: Sailec;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 45px;
-    line-height: 56px;
-    color: white;
-}
-.btn-1{
-    border: none;
-    background: #FF5A5A;
-    color: white;
-    padding: 4% 15% 4% 15%;
-    border-radius: 7px;
-    margin-top: 4%;
-}
-.bottom-section{
-    margin: 8% 0 0 10%;
-    background-color: white;
-    width: 82%;
-    border-radius: 10px;
-}
-.last-section-title{
+// html, body {
+//     height: 100%;
+//   }
+// .main{
+//     height: 100%;
+//     padding-bottom: 10px;
+//     background-image: url(../../../assets/images/home-bg.svg);
+//     background-size: cover;
+//     background-position: center;
+//     background-repeat: no-repeat;
+// }
+// .center-text{
+//     padding: 25% 0 0 0;
+// }
+// .first-line{
+//     font-family: Sailec;
+//     font-style: normal;
+//     font-weight: normal;
+//     font-size: 27px;
+//     line-height: 37px;
+//     color:white;
+// }
+// .second-line{
+//     font-family: Sailec;
+//     font-style: normal;
+//     font-weight: 500;
+//     font-size: 45px;
+//     line-height: 56px;
+//     color: white;
+// }
+// .btn-1{
+//     border: none;
+//     background: #FF5A5A;
+//     color: white;
+//     padding: 4% 15% 4% 15%;
+//     border-radius: 7px;
+//     margin-top: 4%;
+// }
+// .bottom-section{
+//     margin: 8% 0 0 10%;
+//     background-color: white;
+//     width: 82%;
+//     border-radius: 10px;
+// }
+// .last-section-title{
 
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 30px;
-    color: #4f4f4f;
+//     font-style: normal;
+//     font-weight: 400;
+//     font-size: 24px;
+//     line-height: 30px;
+//     color: #4f4f4f;
 
-}
-.part-1{
-    padding-left: 10%;
-}
-.middle{
-    padding: 3%;
-}
-.last-section-basetext{
-    font-family: Roboto,sans-serif;
-    font-style: normal;
-        font-weight: 400;
-        color: #4f4f4f;
-        font-size: 14px;
-}
+// }
+// .part-1{
+//     padding-left: 10%;
+// }
+// .middle{
+//     padding: 3%;
+// }
+// .last-section-basetext{
+//     font-family: Roboto,sans-serif;
+//     font-style: normal;
+//         font-weight: 400;
+//         color: #4f4f4f;
+//         font-size: 14px;
+// }
 .second-section-button{
     background: #eb5757;
     border-radius: 30px;
@@ -95,11 +95,16 @@ html, body {
     -webkit-box-align: center;
     align-items: center;
 }
+.col-marg{
+    margin-top: 25%;
+}
 .second-section{
-        margin: 15% 20% 5% 20%;
-        background-color: white;
+        // margin: 15% 20% 5% 20%;
+        // background-color: white;
+        // margin-top: 100px;
         width: 60%;
-        border-radius: 10px;
+        margin: auto;
+        // border-radius: 10px;
 }
 .second-section-header{
     font-weight: 500;
@@ -118,7 +123,7 @@ html, body {
     padding-top: 5%;
 }
 .third-section{
-    margin: 0 20% 5% 20%;
+    margin: 5% 20% 5% 20%;
     background-color: white;
     width: 60%;
     border-radius: 10px;
@@ -171,6 +176,9 @@ html, body {
 .close-btn{
     margin-left: 95%;
 }
+.fourth-section{
+    margin-top: 12%;
+}
 .first-line-fourth-section{
     font-weight: 500;
     font-size: 16px !important;
@@ -187,6 +195,7 @@ html, body {
     font-size: 12px;
     line-height: 16px;
     color: #4f4f4f;
+    padding-left: 6%;
 }
 .fourth-width{
     width: 80%;
@@ -222,7 +231,7 @@ html, body {
     margin-top: 10%;
 }
 .fifth-section{
-    margin-top: 5%;
+    margin-top: 12%;
 }
 .main{
     background-color: rgba(22,78,204,.86);
@@ -231,6 +240,7 @@ html, body {
     background-color: transparent;
     position: fixed;
     width: 100%;
+    margin-top: 0px !important;
     padding-top: 30px;
     z-index: 1;
     transition: .3s;
