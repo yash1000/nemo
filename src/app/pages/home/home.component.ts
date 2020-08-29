@@ -38,13 +38,14 @@ export class HomeComponent implements OnInit {
         ContactNumber : []
       });
       const element = this.eleref.nativeElement.querySelector('#header2');
-      $(element).find('li>a').css({color: 'black'});
+      // $(element).find('li>a').css({color: 'black'});
       this.router.events.subscribe((evt) => {
         if (!(evt instanceof NavigationEnd)) {
             return;
         }
         window.scrollTo(0, 0)
     });
+    // $(element).find('li>a').css({'color': 'black'});
   }
   openModalWithClass(template: TemplateRef<any>) {
     this.modalRef = this.modalService.show(template, Object.assign({}, { class: 'gray modal-lg' }));

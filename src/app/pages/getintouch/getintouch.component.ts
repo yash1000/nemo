@@ -14,8 +14,8 @@ export class GetintouchComponent implements OnInit {
   profileForm: FormGroup;
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
-    const element = this.eleref.nativeElement.querySelector('#header2');
     const numb = window.scrollY;
+    const element = this.eleref.nativeElement.querySelector('#header2');
     if (numb >= 100) {
     $(element).css('padding-top' , 120);
     $('#parent').css('padding-top', 7);
@@ -28,6 +28,8 @@ export class GetintouchComponent implements OnInit {
   constructor(private router: Router,private eleref: ElementRef, private modalService: BsModalService, private fb: FormBuilder, private api: ApicallService) { }
 
   ngOnInit(): void {
+    const element = this.eleref.nativeElement.querySelector('#header2');
+    // $(element).find('li>a').css({'color': 'black'});
     this.profileForm = this.fb.group({
       Name : ['', Validators.required],
       Organisation : [],

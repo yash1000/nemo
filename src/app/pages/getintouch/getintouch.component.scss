@@ -111,6 +111,9 @@ html{
     margin-top: 8px;
     color: #333;
 }
+button:disabled{
+    background-color: #f7aeae ;
+}
 .btn-1{
     margin: 6%;
     margin-left: 28%;

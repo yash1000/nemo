@@ -30,25 +30,25 @@
     <div class="row wrapper">
         <div class="col-xl-6 col-sm-6">
                 <label for="name">Name</label><br>
-                <input type="text" formControlName="Name" name="name" id="name" placeholder="Full name" required>
+                <input type="text" formControlName="Name" name="name" id="name" placeholder="Full name (required)">
                 <span class="error" *ngIf="profileForm.get('Name').errors?.required  && profileForm.get('Name').touched">
 					Please email address </span>
                     <br><br>
                 <label for="Oname">Name of Organisation</label><br>
-                <input type="text" formControlName="Organisation" name="org" id="org" placeholder="Organisation name (option)"><br><br>
+                <input type="text" formControlName="Organisation" name="org" id="org" placeholder="Organisation name (optional)"><br><br>
                 <label for="other">Contact Number</label><br>
-                <input type="number" formControlName="ContactNumber" name="number" id="number" placeholder="Mobile number" required>
+                <input type="number" formControlName="ContactNumber" name="number" id="number" placeholder="Mobile number(required)">
                 <span class="error" *ngIf="profileForm.get('ContactNumber').errors?.required  && profileForm.get('ContactNumber').touched">
                     Please enter mobile number </span>
                     <br><br>
                 <label for="other">Email</label><br>
-                <input type="text" formControlName="Email" name="email" id="email" placeholder="Email address" required>
+                <input type="text" formControlName="Email" name="email" id="email" placeholder="Email address (required)">
                 <span class="error" *ngIf="profileForm.get('Email').errors?.required  && profileForm.get('Email').touched">
 					Please enter name </span><br>
         </div>
         <div class="col-xl-6 col-sm-6">
             <label for="other">Your message</label><br>
-            <textarea rows="10" formControlName="Message" cols="30" type="text" name="email" id="email" placeholder="Write your message"></textarea><br>
+            <textarea rows="10" formControlName="Message" cols="30" type="text" name="email" id="email" placeholder="Write your message (required)"></textarea><br>
             <span class="error" *ngIf="profileForm.get('Message').errors?.required  && profileForm.get('Message').touched">
                 Please enter message </span>
         </div>
