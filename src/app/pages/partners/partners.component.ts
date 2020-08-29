@@ -21,13 +21,13 @@ export class PartnersComponent implements OnInit {
     if (numb >= 100) {
     $(element).css('padding-top' , 120);
     $('#parent').css('padding-top', 7);
-    $('#parent').css('background-color', '#164ecc');
-    $(element).find('li>a').css({'color': 'white'});
-    } else {
+    // $('#parent').css('background-color', 'white');
+    $('#parent').css('background-color', 'white');
+    // $(element).find('li>a').css({'background-color': 'transparent !important'});
+  } else {
     $(element).css('padding-top' , 120);
+    $('#parent').css({'background-color': 'transparent'});
     $('#parent').css('padding-top', 30);
-    $('#parent').css('background-color', 'transparent');
-    $(element).find('li>a').css({'color': 'white'});
     }
   }
 
@@ -50,7 +50,7 @@ export class PartnersComponent implements OnInit {
     });
 
     const element = this.eleref.nativeElement.querySelector('#header2');
-    $(element).find('li>a').css({'color': 'white'});
+    $(element).find('li>a').css({'color': 'black'});
     this.router.events.subscribe((evt) => {
       if (!(evt instanceof NavigationEnd)) {
           return;
