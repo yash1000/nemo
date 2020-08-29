@@ -30,8 +30,8 @@
     <div class="row wrapper">
         <div class="col-xl-6 col-sm-6">
                 <label for="name">name</label><br>
-                <input type="text" formControlName="Name" name="name" id="name" placeholder="full name" required><br><br>
-                <label for="female">Name of Organisation</label><br>
+                <input type="text" formControlName="Name" name="name" id="name" placeholder="Full name" required><br><br>
+                <label for="Oname">Name of Organisation</label><br>
                 <input type="text" formControlName="Organisation" name="org" id="org" placeholder="Organisation name (option)"><br><br>
                 <label for="other">Contact Number</label><br>
                 <input type="number" formControlName="ContactNumber" name="number" id="number" placeholder="Mobile number" required><br><br>
@@ -43,7 +43,7 @@
             <textarea rows="10" formControlName="Message" cols="30" type="text" name="email" id="email" placeholder="Write your message"></textarea><br>
         </div>
         <div class="button">
-            <button class="form-button" (click)="openModalWithClass(template)">SUBMIT</button>
+            <button class="form-button" (click)="openModalWithClass(template)" [disabled]=!profileForm.valid>SUBMIT</button>
         </div>
     </div>
 </form>

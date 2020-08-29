@@ -1,5 +1,6 @@
 import { Component, OnInit, ElementRef, HostListener } from '@angular/core';
 import * as $ from 'jquery';
+import { Router, NavigationEnd } from '@angular/router';
 @Component({
   selector: 'app-ourstory',
   templateUrl: './ourstory.component.html',
@@ -20,11 +21,16 @@ export class OurstoryComponent implements OnInit {
     }
   }
 
-  constructor(private eleref: ElementRef) { }
+  constructor(private eleref: ElementRef,private router: Router) { }
 
   ngOnInit(): void {
     const element = this.eleref.nativeElement.querySelector('#header2');
-    console.log(element);
+    this.router.events.subscribe((evt) => {
+      if (!(evt instanceof NavigationEnd)) {
+          return;
+      }
+      window.scrollTo(0, 0)
+  });
   }
 
 }

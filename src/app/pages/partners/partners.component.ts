@@ -3,6 +3,7 @@ import * as $ from 'jquery';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { ApicallService } from '../../services/apicall.service'
+import { Router, NavigationEnd } from '@angular/router';
 @Component({
   selector: 'app-partners',
   templateUrl: './partners.component.html',
@@ -31,7 +32,7 @@ export class PartnersComponent implements OnInit {
   }
 
 
-  constructor( private eleref: ElementRef, private modalService: BsModalService, private fb: FormBuilder, private api: ApicallService) { }
+  constructor(private router: Router, private eleref: ElementRef, private modalService: BsModalService, private fb: FormBuilder, private api: ApicallService) { }
 
   ngOnInit(): void {
     this.profileForm = this.fb.group({
@@ -50,6 +51,12 @@ export class PartnersComponent implements OnInit {
 
     const element = this.eleref.nativeElement.querySelector('#header2');
     $(element).find('li>a').css({'color': 'white'});
+    this.router.events.subscribe((evt) => {
+      if (!(evt instanceof NavigationEnd)) {
+          return;
+      }
+      window.scrollTo(0, 0)
+  });
   }
   openModalWithClass(template: TemplateRef<any>) {
     this.modalRef = this.modalService.show(template,Object.assign({}, { class: 'gray modal-md' }));

@@ -2,7 +2,8 @@ import { Component, OnInit, HostListener, ElementRef, TemplateRef } from '@angul
 import * as $ from 'jquery';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
-import { ApicallService } from '../../services/apicall.service'
+import { ApicallService } from '../../services/apicall.service';
+import { Router, NavigationEnd } from '@angular/router';
 @Component({
   selector: 'app-getintouch',
   templateUrl: './getintouch.component.html',
@@ -24,16 +25,22 @@ export class GetintouchComponent implements OnInit {
     $('#parent').css('padding-top', 30);
     }
   }
-  constructor(private eleref: ElementRef, private modalService: BsModalService, private fb: FormBuilder, private api: ApicallService) { }
+  constructor(private router: Router,private eleref: ElementRef, private modalService: BsModalService, private fb: FormBuilder, private api: ApicallService) { }
 
   ngOnInit(): void {
     this.profileForm = this.fb.group({
-      Name : [],
+      Name : ['', Validators.required],
       Organisation : [],
-      ContactNumber : [],
-      Email : [],
-      Message : []
+      ContactNumber : ['', Validators.required],
+      Email : ['' , Validators.required],
+      Message : ['' , Validators.required]
     });
+    this.router.events.subscribe((evt) => {
+      if (!(evt instanceof NavigationEnd)) {
+          return;
+      }
+      window.scrollTo(0, 0)
+  });
   }
   openModalWithClass(template: TemplateRef<any>) {
     this.modalRef = this.modalService.show(template,Object.assign({}, { class: 'gray modal-md' }));
