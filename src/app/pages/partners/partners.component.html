@@ -27,14 +27,11 @@
         <div class="row">
             <div class="col-xl-6 col-sm-6">
                 <h3 class="main-content-first-heading">Lending</h3><br>
-                <p class="t-1">We offer term loans and 
-                    invoice discounting to MSMEs through a network of lending partners. We reduce credit risk and assist in credit underwriting by giving confidence score, credit event alert, and providing holistic business services to MSMEs so that credit financing is deployed correctly.
-                    </p>
-                <!-- <p class="t-1">Giving confidence score, which is updated every quarter, based on over 20 financial and
-                    non-financial parameters</p>
-                <p class="t-1">Real-time credit event alerts as MSMEs transact on our platform</p>
-                <p class="t-1">Providing holistic business services so that credit financing is deployed for business.
-                </p> -->
+                <p class="t-1">We offer term loans and
+                    invoice discounting to MSMEs through a network of lending partners. We reduce credit risk and assist
+                    in credit underwriting by giving confidence score, credit event alert, and providing holistic
+                    business services to MSMEs so that credit financing is deployed correctly.
+                </p>
                 <button class="leding-partner-form" (click)="openModalWithClass(template1)">Become a Lending
                     Partner</button>
             </div>
@@ -71,9 +68,10 @@
             </div>
             <div class="col-xl-6 col-sm-6 text-business">
                 <p class="business-secrtiton-text">Business Services</p>
-                <p class="t-2">Our service partners collaborate with Nemo to 
-                    help MSMEs with compliance, business investments, and operations. We focus on implementation and tangible outcomes.
-                    </p>
+                <p class="t-2">Our service partners collaborate with Nemo to
+                    help MSMEs with compliance, business investments, and operations. We focus on implementation and
+                    tangible outcomes.
+                </p>
                 <img src="../../../assets/images/smea.png"><br><br>
                 <button class="business-section-button" (click)="openModalWithClass1(template)">Become a Business
                     Service Partner</button>
@@ -96,13 +94,17 @@
         <div class="modal-body">
             <div class="row">
                 <div class="col-xl-12">
-                    <form  [formGroup]="profileForm"  (ngSubmit)="onSubmit($event)">
-                    <input type="text" class="model-input1" formControlName="CompanyName" placeholder="Company Name" required><br>
-                    <input type="text" class="model-input1" formControlName="ContactPerson" placeholder="Contact Person" required><br>
-                    <input type="text" class="model-input1" formControlName="ContactNumber" placeholder="Phone number" required><br>
-                    <input type="text" class="model-input1" formControlName="Email" placeholder="Email" required><br>
-                    <button class="btn btn-default btn-3" (click)="modalRef.hide()">Submit</button>
-                </form>
+                    <form [formGroup]="profileForm" (ngSubmit)="onSubmit($event)">
+                        <input type="text" class="model-input1" formControlName="CompanyName" placeholder="Company Name"
+                            required><br>
+                        <input type="text" class="model-input1" formControlName="ContactPerson"
+                            placeholder="Contact Person" required><br>
+                        <input type="text" class="model-input1" formControlName="ContactNumber"
+                            placeholder="Phone number" required><br>
+                        <input type="text" class="model-input1" formControlName="Email" placeholder="Email"
+                            required><br>
+                        <button class="btn btn-default btn-3" (click)="modalRef.hide()">Submit</button>
+                    </form>
                 </div>
 
             </div>
@@ -120,31 +122,32 @@
 
     </div>
     <div class="modal-body">
-        <form  [formGroup]="profileForm1"  (ngSubmit)="onSubmit1($event)">
-        <div class="row">
-            
-            <div class="col-xl-6">
-                <input type="text" class="model-input" formControlName="Name" placeholder="Name" required><br><br>
-                <input type="text" class="model-input" formControlName="PhoneNumber" placeholder="Phone number" required>
+        <form [formGroup]="profileForm1" (ngSubmit)="onSubmit1($event)">
+            <div class="row">
+
+                <div class="col-xl-6">
+                    <input type="text" class="model-input" formControlName="Name" placeholder="Name" required><br><br>
+                    <input type="text" class="model-input" formControlName="PhoneNumber" placeholder="Phone number"
+                        required>
+                </div>
+                <div class="col-xl-6">
+                    <select formControlName="ServiceArea" class="model-input" [(ngModal)]="inp" required>
+                        <option value="" disabled selected>Select your option</option>
+                        <option value="Searvice area"> Taxes & Compliance</option>
+                        <option value="haydrabd1">Operations Improvement</option>
+                        <option value="haydrabad2">Investment </option>
+                        <option value="audhaydrabad3">Sales & Aggregation</option>
+                        <option value="audhaydrabad3">Material Sourcing</option>
+                        <option value="audhaydrabad3">Export/Import</option>
+                    </select>
+                    <br><br>
+                    <input type="text" class="model-input" formControlName="Email" placeholder="Email" required>
+                    <br>
+
+                </div>
+                <button class="btn btn-default btn-2" (click)="modalRef.hide()">Submit</button>
             </div>
-            <div class="col-xl-6">
-                <select formControlName="ServiceArea" class="model-input" [(ngModal)]="inp" required>
-                    <option value=""  disabled  selected>Select your option</option>
-                    <option value="Searvice area"> Taxes & Compliance</option>
-                    <option value="haydrabd1">Operations Improvement</option>
-                    <option value="haydrabad2">Investment </option>
-                    <option value="audhaydrabad3">Sales & Aggregation</option>
-                    <option value="audhaydrabad3">Material Sourcing</option>
-                    <option value="audhaydrabad3">Export/Import</option>
-                </select>
-                <br><br>
-                <input type="text" class="model-input" formControlName="Email" placeholder="Email" required>
-                <br>
-                
-            </div>
-            <button class="btn btn-default btn-2" (click)="modalRef.hide()">Submit</button>
-        </div>
-    </form> 
+        </form>
     </div>
 
 </ng-template>

@@ -25,7 +25,6 @@ export class OurstoryComponent implements OnInit {
 
   ngOnInit(): void {
     const element = this.eleref.nativeElement.querySelector('#header2');
-    // $(element).find('li>a').css({'color': 'black'});
     this.router.events.subscribe((evt) => {
       if (!(evt instanceof NavigationEnd)) {
           return;
